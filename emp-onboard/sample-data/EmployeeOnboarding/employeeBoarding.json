@@ -1,0 +1,18 @@
+{
+  "employeeData": {
+    "Empname": "",
+    "Country": "IN",
+    "Band": "T1",
+    "Department":""
+  },
+  "businessRule": {
+    "RuleServiceId": "60c5568dec7e47db96929c771b536658",
+    "Vocabulary": [
+      {
+        "Level": "T1"
+      }
+    ]
+    },
+  "resultEmployee": {},
+  "resultBusinessRule": {}
+  }

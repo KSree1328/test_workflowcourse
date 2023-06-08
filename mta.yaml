@@ -1,0 +1,21 @@
+_schema-version: "3.2"
+ID: employeeOnboarding
+version: 0.0.1
+modules:
+- name: emp-onboard
+  type: com.sap.application.content
+  path: emp-onboard
+  requires:
+  - name: kk_workflow
+    parameters:
+      content-target: true
+      service-key:
+        config:
+          deployUsageScenario: workflow
+        name: spa-workflow-service-key
+resources:
+- name: kk_workflow
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: workflow
+    service-plan: lite

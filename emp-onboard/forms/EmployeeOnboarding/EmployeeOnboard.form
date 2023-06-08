@@ -1,0 +1,81 @@
+{
+    "id": "employeeonboard",
+    "schemaVersion": "1.1.0",
+    "name": "EmployeeOnboard",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "employee_name",
+            "type": "string",
+            "label": "Employee Name",
+            "readOnly": false,
+            "value": "${context.employeeData.Empname}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "department",
+            "type": "string",
+            "label": "Department",
+            "readOnly": false,
+            "value": "${context.employeeData.Department}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "country",
+            "type": "string",
+            "label": "Country",
+            "readOnly": false,
+            "value": "${context.employeeData.Country}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "band",
+            "type": "string",
+            "label": "Band",
+            "readOnly": false,
+            "value": "${context.employeeData.Department}",
+            "control": {
+                "type": "Dropdown",
+                "properties": {
+                    "items": [
+                        {
+                            "value": "T1",
+                            "displayValue": "Fresher"
+                        },
+                        {
+                            "value": "T2",
+                            "displayValue": "Blue Coller"
+                        },
+                        {
+                            "value": "T3",
+                            "displayValue": "Executive"
+                        }
+                    ]
+                }
+            },
+            "constraints": {
+                "required": true,
+                "enum": [
+                    "T1",
+                    "T2",
+                    "T3"
+                ]
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "submit",
+            "text": "Submit",
+            "decisionType": ""
+        }
+    ]
+}
